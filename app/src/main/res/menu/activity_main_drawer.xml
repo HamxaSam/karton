@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Calculater"
+            android:icon="@mipmap/ic_launcher"
+            android:title="Calculater"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/nav_utube"
+            android:icon="@mipmap/ic_launcher"
+            android:title="utube"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/nav_Facebook"
+            android:icon="@mipmap/ic_launcher"
+            android:title="FaceBook"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_soundCloud"
+            android:icon="@mipmap/ic_launcher"
+            android:title="SoundCloud"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_picker"
+            android:icon="@mipmap/ic_launcher"
+            android:title="ColorPicker"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="LogOut"
+            tools:ignore="HardcodedText" />
+
+        <item android:title="Communicate"
+            tools:ignore="HardcodedText">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/nav_share"
+                        android:icon="@drawable/ic_menu_share"
+                        android:title="Share" />
+                    <item
+                        android:id="@+id/nav_send"
+                        android:icon="@drawable/ic_menu_send"
+                        android:title="Send" />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+</menu>
