@@ -1,54 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_Calculater"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Calculater"
+            android:id="@+id/Catagory"
+            android:icon="@drawable/catagory"
+            android:title="Catagory"
+            tools:ignore="HardcodedText" />
+       <item
+            android:id="@+id/Search"
+            android:icon="@android:drawable/ic_menu_search"
+            android:title="Search"
+            tools:ignore="HardcodedText" />
+       <item
+            android:id="@+id/Favorite"
+            android:icon="@drawable/likelogo"
+            android:title="Favorite"
+            tools:ignore="HardcodedText" />
+        <item
+            android:id="@+id/Latest"
+            android:icon="@drawable/latest"
+            android:title="Latest"
             tools:ignore="HardcodedText" />
 
-        <item
-            android:id="@+id/nav_utube"
-            android:icon="@mipmap/ic_launcher"
-            android:title="utube"
-            tools:ignore="HardcodedText" />
-
-        <item
-            android:id="@+id/nav_Facebook"
-            android:icon="@mipmap/ic_launcher"
-            android:title="FaceBook"
-            tools:ignore="HardcodedText" />
-        <item
-            android:id="@+id/nav_soundCloud"
-            android:icon="@mipmap/ic_launcher"
-            android:title="SoundCloud"
-            tools:ignore="HardcodedText" />
-        <item
-            android:id="@+id/nav_picker"
-            android:icon="@mipmap/ic_launcher"
-            android:title="ColorPicker"
-            tools:ignore="HardcodedText" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_menu_logout"
-            android:title="LogOut"
-            tools:ignore="HardcodedText" />
-
-        <item android:title="Communicate"
+        <item android:title="More"
             tools:ignore="HardcodedText">
             <menu>
                 <group android:checkableBehavior="single">
                     <item
-                        android:id="@+id/nav_share"
-                        android:icon="@drawable/ic_menu_share"
+                        android:id="@+id/Ask"
+                        android:icon="@drawable/question"
+                        android:title="Ask for a series"
+                        tools:ignore="HardcodedText" />
+                    <item
+                        android:id="@+id/Report"
+                        android:icon="@drawable/bug"
+                        android:title="Report for broken Episoide" />
+                    <item
+                        android:id="@+id/share"
+                        android:icon="@drawable/ic_screen_share"
                         android:title="Share" />
                     <item
-                        android:id="@+id/nav_send"
-                        android:icon="@drawable/ic_menu_send"
-                        android:title="Send" />
-                </group>
+                        android:id="@+id/Rate"
+                        android:icon="@drawable/rate"
+                        android:title="Rate" />
+               </group>
             </menu>
         </item>
 
