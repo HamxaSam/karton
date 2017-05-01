@@ -1,0 +1,43 @@
+ <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="match_parent">
+
+     <android.support.v7.widget.CardView
+         android:id="@+id/card_view"
+         android:layout_width="80dp"
+         android:backgroundTint="@color/colorPrimaryDark"
+         android:layout_height="80dp"
+         card_view:cardCornerRadius="@dimen/activity_vertical_margin"
+         android:layout_marginLeft="4dp"
+         android:layout_marginStart="27dp"
+         android:layout_marginTop="10dp">
+
+         <ImageView
+             android:id="@+id/thumbnail"
+             android:layout_width="80dp"
+             android:layout_height="80dp"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentStart="true"
+             android:background="@drawable/shape"
+             android:src="@mipmap/ic_launcher"
+             tools:ignore="ContentDescription" />
+
+     </android.support.v7.widget.CardView>
+
+     <TextView
+         android:id="@+id/title"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textColor="@color/colorAccent"
+         android:layout_alignLeft="@+id/card_view"
+         android:layout_alignStart="@+id/card_view"
+         android:layout_below="@+id/card_view"
+         android:layout_marginTop="11dp"
+         android:text="tom and jerry" />
+
+
+ </RelativeLayout>
