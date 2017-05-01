@@ -1,113 +1,107 @@
 package com.example.hamza.karton;
 
-import android.app.ProgressDialog;
+
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.example.hamza.karton.Model.Album;
-import com.example.hamza.karton.RecyclerView.AlbumsAdapter;
-import com.example.hamza.karton.helper.AppConfig;
-import com.example.hamza.karton.helper.AppController;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private AlbumsAdapter adapter;
-    private List<Album> albumList;
-    ProgressDialog pDialog;
-    StringRequest strReq;
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+  // declaration here.........
+    Toolbar toolbar;
+    DrawerLayout drawer;
+    NavigationView navigationView;
+    ActionBarDrawerToggle toggle;
+    Fragment fragment;
+    FragmentManager fragmentManager;
+  // on back press nevigation drawer
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.END)) {
+            drawer.closeDrawer(GravityCompat.END);
+        } else {
+            super.onBackPressed();
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        albumList = new ArrayList<>();
+      // initilization.....
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
+        setSupportActionBar(toolbar);
+        toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
 
-        final RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 3);
-
-
-        pDialog = new ProgressDialog(MainActivity.this);
-        // pDialog.setMessage("please wait!!");
-        if (!pDialog.isShowing())
-            pDialog.show();
-        final String query = "cartoon";
-
-
-        try {
-            strReq = new StringRequest(Request.Method.GET,
-                    AppConfig.URL_YOUTUBE + "&q=" + URLEncoder.encode(query, "UTF-8"), new Response.Listener<String>() {
-
-                @Override
-                public void onResponse(String response) {
-                    //Log.d(TAG, "Login Response: " + response.toString());
-                    if (pDialog.isShowing())
-                        pDialog.hide();
-
-                    Log.d("MainActivity response", response);
-                    try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        JSONArray itemsJsonArray = jsonObject.getJSONArray("items");
-                        for (int i = 0; i < itemsJsonArray.length(); i++) {
-                            JSONObject singleVideoJsonOnject = itemsJsonArray.getJSONObject(i);
-                            JSONObject snippetObject = singleVideoJsonOnject.getJSONObject("snippet");
-                            String title = snippetObject.getString("title");
-
-                            JSONObject thumbnailObject = snippetObject.getJSONObject("thumbnails");
-
-                            JSONObject defaultObject = thumbnailObject.getJSONObject("default");
-                            String urll = defaultObject.getString("url");
-
-                            Album album = new Album(title, urll);
-                            albumList.add(album);
-
-                        }
-                        recyclerView.setLayoutManager(mLayoutManager);
-                        recyclerView.setItemAnimator(new DefaultItemAnimator());
-
-                        adapter = new AlbumsAdapter(MainActivity.this, albumList);
-                        recyclerView.setAdapter(adapter);
-                        adapter.notifyDataSetChanged();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }, new Response.ErrorListener() {
-
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    //                Log.e(TAG, "Login Error: " + error.getMessage());
-                    Toast.makeText(getApplicationContext(),
-                            error.getMessage(), Toast.LENGTH_LONG).show();
-                    if (pDialog.isShowing())
-                        pDialog.hide();
-                }
-            });
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+        toggle.syncState();
+    }
+    @Override
+    //on navigational item click
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        if (item != null && item.getItemId() == android.R.id.home) {
+            if (drawer.isDrawerOpen(Gravity.END)) {
+                drawer.closeDrawer(Gravity.END);
+            } else {
+                drawer.openDrawer(Gravity.END);
+            }
+            return false;
         }
 
-        // Adding request to request queue
-        AppController.getInstance().addToRequestQueue(strReq, "");
-    }
+        int id = item.getItemId();
+        Fragment fragment = null;
+        switch (id) {
+            case R.id.Catagory:
+                Toast.makeText(getApplication(),"Catagory has selected..",Toast.LENGTH_SHORT).show();
+                //fragment = new Fragment_utube_activity();
+                break;
+            case R.id.Search:
+                Toast.makeText(getApplication(),"search has selected..",Toast.LENGTH_SHORT).show();
+                //  fragment = new Frafment_Calculater_activity();
+                break;
+            case R.id.Favorite:
+                Toast.makeText(getApplication(),"Favorite has selected..",Toast.LENGTH_SHORT).show();
+                // fragment = new colorPicker_activity();
+                break;
 
-    }
+            case R.id.Latest:
+                Toast.makeText(getApplication(),"latest has selected..",Toast.LENGTH_SHORT).show();
+                // fragment = new facebook_activity();
+                break;
+            case R.id.Report:
+                Toast.makeText(getApplication(),"Report has selected..",Toast.LENGTH_SHORT).show();
+                //fragment = new facebook_activity();
+                break;
+            case R.id.share:
+                Toast.makeText(getApplication(),"Share has selected..",Toast.LENGTH_SHORT).show();
+                //fragment = new facebook_activity();
+                break;
+            case R.id.Rate:
+                Toast.makeText(getApplication(),"Catagory has selected..",Toast.LENGTH_SHORT).show();
+                // fragment = new facebook_activity();
+                Toast.makeText(getApplicationContext(),"",Toast.LENGTH_SHORT).show();
+                break;
+        }
+        fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.flContent, fragment)
+                .commit();
 
+        navigationView.setCheckedItem(id);
+        drawer.closeDrawer(GravityCompat.END);
+        return true;
+    }
+}
