@@ -1,7 +1,6 @@
 package com.example.hamza.karton;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,8 +9,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
@@ -79,7 +76,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Fragment fragment = null;
         switch (id) {
             case R.id.Catagory:
-                Toast.makeText(getApplication(),"Catagory has selected..",Toast.LENGTH_SHORT).show();
                 fragment = new CatagoryFragment();
                 break;
             case R.id.Search:
