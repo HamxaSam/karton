@@ -1,4 +1,5 @@
 package com.example.hamza.karton;
+
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -14,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.hamza.karton.Fragments.CatagoryFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
   // declaration here.........
@@ -36,9 +39,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
 
-        // initilization.....
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -49,7 +53,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        if (savedInstanceState == null) {
+            Fragment fragment = new CatagoryFragment();
+            navigationView.getMenu().getItem(0).setChecked(true);
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+        }
+
     }
+
     @Override
     //on navigational item click
     public boolean onNavigationItemSelected( MenuItem item) {
@@ -67,10 +80,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case R.id.Catagory:
                 Toast.makeText(getApplication(),"Catagory has selected..",Toast.LENGTH_SHORT).show();
-                //fragment = new Fragment_utube_activity();
+                fragment = new CatagoryFragment();
                 break;
             case R.id.Search:
-                Toast.makeText(getApplication(),"Search has selected..",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplication(),"search has selected..",Toast.LENGTH_SHORT).show();
                 //  fragment = new Frafment_Calculater_activity();
                 break;
             case R.id.Favorite:
@@ -117,4 +130,3 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }*/
 }
-
