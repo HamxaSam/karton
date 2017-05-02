@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.hamza.karton.Model.Album;
 import com.example.hamza.karton.R;
 
@@ -39,11 +40,11 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         Album album = albumList.get(position);
 
         holder.title.setText(album.getName());
-        holder.thumbnail.setImageResource(R.drawable.pic);
+       // holder.thumbnail.setImageResource(R.drawable.pic);
 
         // loading album cover using Glide library
 
-        //Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
+      Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
 
 
     }

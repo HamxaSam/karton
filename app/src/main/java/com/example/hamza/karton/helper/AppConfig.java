@@ -5,5 +5,5 @@ package com.example.hamza.karton.helper;
  */
 
 public class AppConfig {
-    public static String URL_YOUTUBE = "https://www.googleapis.com/youtube/v3/search?part=snippet&pageToken=&order=relevance&maxResults=5&key=AIzaSyBGm7TXga-TWEcMQe4rMq8SY_VJi8tPRqM";
+    public static String URL_YOUTUBE = "https://www.googleapis.com/youtube/v3/search?part=snippet&pageToken=&order=relevance&maxResults=20&key=AIzaSyBGm7TXga-TWEcMQe4rMq8SY_VJi8tPRqM";
 }

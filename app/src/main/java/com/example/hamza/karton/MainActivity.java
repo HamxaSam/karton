@@ -15,6 +15,8 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.hamza.karton.Fragments.CatagoryFragment;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
   // declaration here.........
     Toolbar toolbar;
@@ -48,7 +50,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.addDrawerListener(toggle);
 
         toggle.syncState();
+
+        if (savedInstanceState == null) {
+            Fragment fragment = new CatagoryFragment();
+            navigationView.getMenu().getItem(0).setChecked(true);
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+        }
+
     }
+
     @Override
     //on navigational item click
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -66,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (id) {
             case R.id.Catagory:
                 Toast.makeText(getApplication(),"Catagory has selected..",Toast.LENGTH_SHORT).show();
-                //fragment = new Fragment_utube_activity();
+                fragment = new CatagoryFragment();
                 break;
             case R.id.Search:
                 Toast.makeText(getApplication(),"search has selected..",Toast.LENGTH_SHORT).show();

@@ -25,7 +25,6 @@
         android:layout_marginTop="55dp"
         android:background="@color/colorAccent"
         android:fitsSystemWindows="true"
-
         app:itemIconTint="@color/textColor"
         app:itemTextColor="@color/textColor"
         app:menu="@menu/activity_main_drawer"
