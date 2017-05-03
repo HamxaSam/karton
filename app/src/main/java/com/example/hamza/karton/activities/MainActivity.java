@@ -1,4 +1,4 @@
-package com.example.hamza.karton;
+package com.example.hamza.karton.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -13,7 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.hamza.karton.Fragments.CatagoryFragment;
+import com.example.hamza.karton.Fragments.ActivityShareFragment;
+import com.example.hamza.karton.R;
+import com.example.hamza.karton.youtubeData.YouTubeActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
   // declaration here.........
@@ -52,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            Fragment fragment = new CatagoryFragment();
+            Fragment fragment = new YouTubeActivity();
             navigationView.getMenu().getItem(0).setChecked(true);
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Fragment fragment = null;
         switch (id) {
             case R.id.Catagory:
-                fragment = new CatagoryFragment();
+                fragment = new YouTubeActivity();
                 break;
             case R.id.Search:
                 Toast.makeText(getApplication(),"search has selected..",Toast.LENGTH_SHORT).show();
@@ -96,8 +98,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 //fragment = new facebook_activity();
                 break;
             case R.id.share:
-                Toast.makeText(getApplication(),"Share has selected..",Toast.LENGTH_SHORT).show();
-                //fragment = new facebook_activity();
+
+                fragment = new ActivityShareFragment();
                 break;
             case R.id.Rate:
                 Toast.makeText(getApplication(),"Catagory has selected..",Toast.LENGTH_SHORT).show();

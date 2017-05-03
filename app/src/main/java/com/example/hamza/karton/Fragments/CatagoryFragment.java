@@ -31,9 +31,12 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
+import io.vov.vitamio.utils.StringUtils;
+
 public class CatagoryFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList albumList;
+    ArrayList<String> arrr;
     ProgressDialog pDialog;
     StringRequest strReq;
     AlbumsAdapter adapter;
@@ -48,17 +51,16 @@ public class CatagoryFragment extends Fragment {
         final RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-
         adapter = new AlbumsAdapter(getActivity(), albumList);
         recyclerView.setAdapter(adapter);
-
-
+        arrr = new ArrayList<>();
+        String str = StringUtils.join(arrr, ",");
 
         pDialog = new ProgressDialog(getContext());
          pDialog.setMessage("please wait!!");
         if (!pDialog.isShowing())
             pDialog.show();
-        final String query = "cartoon";
+        final String query = "PLWz5rJ2EKKc_Tt7q77qwyKRgytF1RzRx8";
 
 
         try {
