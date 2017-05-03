@@ -19,7 +19,6 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.hamza.karton.Fragments.CatagoryFragment;
-import com.example.hamza.karton.Fragments.ShareFragment;
 import com.example.hamza.karton.language.TypefaceUtil;
 
 import java.util.Locale;
@@ -54,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         config.locale = locale;
         getApplicationContext().getResources().updateConfiguration(config, null);
 
-//        LocaleHelper.setLocale(getApplicationContext(),"ar-TN");
-//        Locale.setDefault(Locale.forLanguageTag("ar"));
+//       LocaleHelper.setLocale(getApplicationContext(),"ar-TN");
+//       Locale.setDefault(Locale.forLanguageTag("ar"));
 
         getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -108,21 +107,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // fragment = new colorPicker_activity();
                 break;
             case R.id.Latest:
-                Toast.makeText(getApplication(),"latest has selected..",Toast.LENGTH_SHORT).show();
-                // fragment = new facebook_activity();
+                fragment = new CatagoryFragment();
                 break;
             case R.id.Report:
                 Toast.makeText(getApplication(),"Report has selected..",Toast.LENGTH_SHORT).show();
                 //fragment = new facebook_activity();
                 break;
             case R.id.share:
+                String message = "Text I want to share.";
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("text/plain");
+                share.putExtra(Intent.EXTRA_TEXT, message);
+                startActivity(Intent.createChooser(share, "Title of the dialog the system will open"));
                 Toast.makeText(getApplication(),"Share has selected..",Toast.LENGTH_SHORT).show();
-                fragment = new ShareFragment();
+                // fragment = new ShareFragment();
                 break;
             case R.id.Rate:
                 Toast.makeText(getApplication(),"Catagory has selected..",Toast.LENGTH_SHORT).show();
                 // fragment = new facebook_activity();
-                Toast.makeText(getApplicationContext(),"",Toast.LENGTH_SHORT).show();
                 break;
         }
         fragmentManager = getSupportFragmentManager();
