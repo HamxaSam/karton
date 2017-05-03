@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/open_drawer"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/search"
         android:title="Open"
-        android:icon="@drawable/bar"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/favourite"
+        android:icon="@drawable/likelogo"
+        android:title="Open"
+        app:showAsAction="always"
+        tools:ignore="HardcodedText" />
+
 </menu>

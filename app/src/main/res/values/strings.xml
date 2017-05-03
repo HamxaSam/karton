@@ -1,6 +1,23 @@
 <resources>
-    <string name="app_name" translatable="true">karton</string>
     <string name="navigation_drawer_open">navigation_drawer_open</string>
     <string name="navigation_drawer_close">navigation_drawer_close</string>
-
+    <string name="app_name" translatable="true">karton+</string>
+    <string name="titleColor">ea8f38</string>
+    <string name="title_activity_share_fragment">ShareFragment</string>
+    <string name="tag" />
+    <string name="favorite" translatable="true">favorite</string>
+    <string name="search" translatable="true">search</string>
+    <string name="seasons_number" translatable="true">seasons number</string>
+    <string name="episodes_number" translatable="true">episodes number</string>
+    <string name="views" translatable="true">views</string>
+    <string name="search_for_a_cartoon" translatable="true">search for a cartoon</string>
+    <string name="Type_what_you_are_looking_for_then_tap_search" translatable="true">Type what you are looking for then tap search</string>
+    <string name="cancel" translatable="true">cancel</string>
+    <string name="latest" translatable="true">latest</string>
+    <string name="Ask_for_a_series" translatable="true">Ask for a series</string>
+    <string name="Report_a_broken_episode" translatable="true">Report a broken episode</string>
+    <string name="Share_this_app" translatable="true">Share this app</string>
+    <string name="category" translatable="true">category</string>
+    <string name="Rate_this_app">Rate this App</string>
 </resources>
+

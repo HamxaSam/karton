@@ -17,9 +17,9 @@ import java.util.List;
 
 public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHolder> {
 
+    LayoutInflater inflator;
     private Activity mContext;
     private List<Album> albumList;
-    LayoutInflater inflator;
 
     public AlbumsAdapter(Activity mContext, List<Album> albumList) {
         this.mContext = mContext;
@@ -34,7 +34,6 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
         return new MyViewHolder(v);
     }
-
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Album album = albumList.get(position);
@@ -45,8 +44,12 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         // loading album cover using Glide library
 
       Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
+    }
 
+    @Override
+    public int getItemCount() {
 
+        return albumList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -58,14 +61,5 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
             title = (TextView) v.findViewById(R.id.title);
             thumbnail = (ImageView) v.findViewById(R.id.thumbnail);
         }
-    }
-
-
-
-
-    @Override
-    public int getItemCount() {
-
-        return albumList.size();
     }
 }

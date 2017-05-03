@@ -2,11 +2,11 @@ package com.example.hamza.karton.Fragments;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.hamza.karton.Model.Album;
 import com.example.hamza.karton.R;
-import com.example.hamza.karton.RecyclerView.AlbumsAdapter;
+import com.example.hamza.karton.adapters.AlbumsAdapter;
 import com.example.hamza.karton.helper.AppConfig;
 import com.example.hamza.karton.helper.AppController;
 
@@ -37,11 +37,10 @@ public class CatagoryFragment extends Fragment {
     ProgressDialog pDialog;
     StringRequest strReq;
     AlbumsAdapter adapter;
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View view= inflater.inflate(R.layout.content_main,container,false);
-
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         albumList = new ArrayList<>();
@@ -51,8 +50,6 @@ public class CatagoryFragment extends Fragment {
 
         adapter = new AlbumsAdapter(getActivity(), albumList);
         recyclerView.setAdapter(adapter);
-
-
 
         pDialog = new ProgressDialog(getContext());
          pDialog.setMessage("please wait!!");

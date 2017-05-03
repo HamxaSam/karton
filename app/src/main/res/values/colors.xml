@@ -6,4 +6,7 @@
     <color name="colorAccent">#515151</color>
     <color name="textColor">#ea8f38</color>
     <color name="textColorfav">#ffffff</color>
+    <color name="textColortext">#fac538</color>
+    <color name="textColorView">#77922a</color>
+
 </resources>

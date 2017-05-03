@@ -5,24 +5,23 @@
         <item
             android:id="@+id/Catagory"
             android:icon="@drawable/catagory"
-            android:title="Catagory"
+            android:title="@string/category"
             tools:ignore="HardcodedText" />
        <item
             android:id="@+id/Search"
             android:icon="@android:drawable/ic_menu_search"
-            android:title="Search"
+           android:title="@string/search"
             tools:ignore="HardcodedText" />
        <item
             android:id="@+id/Favorite"
             android:icon="@drawable/likelogo"
-            android:title="Favorite"
+           android:title="@string/favorite"
             tools:ignore="HardcodedText" />
         <item
             android:id="@+id/Latest"
             android:icon="@drawable/latest"
-            android:title="Latest"
+            android:title="@string/latest"
             tools:ignore="HardcodedText" />
-
         <item android:title="More"
             tools:ignore="HardcodedText">
             <menu>
@@ -30,23 +29,22 @@
                     <item
                         android:id="@+id/Ask"
                         android:icon="@drawable/question"
-                        android:title="Ask for a series"
+                        android:title="@string/Ask_for_a_series"
                         tools:ignore="HardcodedText" />
                     <item
                         android:id="@+id/Report"
                         android:icon="@drawable/bug"
-                        android:title="Report for broken Episoide" />
+                        android:title="@string/Report_a_broken_episode" />
                     <item
                         android:id="@+id/share"
                         android:icon="@drawable/ic_screen_share"
-                        android:title="Share" />
+                        android:title="@string/Share_this_app" />
                     <item
                         android:id="@+id/Rate"
                         android:icon="@drawable/rate"
-                        android:title="Rate" />
+                        android:title="@string/Rate_this_app" />
                </group>
             </menu>
         </item>
-
     </group>
 </menu>
