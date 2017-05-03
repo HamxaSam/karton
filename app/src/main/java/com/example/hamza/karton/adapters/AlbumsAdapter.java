@@ -1,4 +1,4 @@
-package com.example.hamza.karton.RecyclerView;
+package com.example.hamza.karton.adapters;
 
 import android.app.Activity;
 import android.content.Context;

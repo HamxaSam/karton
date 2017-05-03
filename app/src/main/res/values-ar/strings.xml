@@ -1,0 +1,28 @@
+<resources>
+    <string name="navigation_drawer_open">navigation_drawer_open</string>
+    <string name="navigation_drawer_close">navigation_drawer_close</string>
+    <string name="app_name" translatable="true">karton+</string>
+    <string name="titleColor">ea8f38</string>
+    <string name="title_activity_share_fragment">ShareFragment</string>
+    <string name="tag"/>
+
+    <!--
+        <string name="name">بحث</string>
+        <string name="Search">البحث </string>
+           <string name="app_name">حسب</string>
+        <string name="Favorite">المفضلة</string>
+        <string name="Seasons number">عدد الأجزاء</string>
+        <string name="Episodes number">عدد الحلقات </string>
+        <string name="Views">المشاهدات </string>
+        <string name="Search for a cartoon">البحث عن كرتون </string>
+        <string name="Type what you are looking for then tap search">كتب أسم الكرتون الذي تبحث عنه </string>
+        <string name="Cancel">إلغاء </string>
+        <string name="Category">الأقسام </string>
+        <string name="Latest">المضاف حديثاً </string>
+        <string name="Ask for a series">طلب إضافة المزيد </string>
+        <string name="Report a broken episode">إبلاغ عن حلقة لا تعمل </string>
+        <string name="Share this app">بحث </string>
+        <string name="Rate this app">تقييم التطبيق :</string>-->
+
+</resources>
+
