@@ -1,28 +1,20 @@
 <resources>
-    <string name="navigation_drawer_open">navigation_drawer_open</string>
-    <string name="navigation_drawer_close">navigation_drawer_close</string>
-    <string name="app_name" translatable="true">karton+</string>
-    <string name="titleColor">ea8f38</string>
-    <string name="title_activity_share_fragment">ShareFragment</string>
-    <string name="tag"/>
-
-    <!--
-        <string name="name">بحث</string>
-        <string name="Search">البحث </string>
-           <string name="app_name">حسب</string>
-        <string name="Favorite">المفضلة</string>
-        <string name="Seasons number">عدد الأجزاء</string>
-        <string name="Episodes number">عدد الحلقات </string>
-        <string name="Views">المشاهدات </string>
-        <string name="Search for a cartoon">البحث عن كرتون </string>
-        <string name="Type what you are looking for then tap search">كتب أسم الكرتون الذي تبحث عنه </string>
-        <string name="Cancel">إلغاء </string>
-        <string name="Category">الأقسام </string>
-        <string name="Latest">المضاف حديثاً </string>
-        <string name="Ask for a series">طلب إضافة المزيد </string>
-        <string name="Report a broken episode">إبلاغ عن حلقة لا تعمل </string>
-        <string name="Share this app">بحث </string>
-        <string name="Rate this app">تقييم التطبيق :</string>-->
+    <string name="name">بحث</string>
+    <string name="search">البحث </string>
+    <string name="app_name">كرتون+ </string>
+    <string name="favorite">المفضلة</string>
+    <string name="seasons_number">عدد الأجزاء</string>
+    <string name="episodes_number">عدد الحلقات </string>
+    <string name="views">المشاهدات </string>
+    <string name="search_for_a_cartoon">البحث عن كرتون </string>
+    <string name="Type_what_you_are_looking_for_then_tap_search">كتب أسم الكرتون الذي تبحث عنه </string>
+    <string name="cancel">إلغاء </string>
+    <string name="category">الأقسام </string>
+    <string name="latest">المضاف حديثاً </string>
+    <string name="Ask_for_a_series">طلب إضافة المزيد </string>
+    <string name="Report_a_broken_episode">إبلاغ عن حلقة لا تعمل </string>
+    <string name="Share_this_app">بحث </string>
+    <string name="Rate_this_app">تقييم التطبيق </string>
 
 </resources>
 
