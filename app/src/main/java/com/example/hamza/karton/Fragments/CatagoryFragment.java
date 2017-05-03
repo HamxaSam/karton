@@ -60,7 +60,7 @@ public class CatagoryFragment extends Fragment {
          pDialog.setMessage("please wait!!");
         if (!pDialog.isShowing())
             pDialog.show();
-        final String query = "PLWz5rJ2EKKc_Tt7q77qwyKRgytF1RzRx8";
+        final String query = "cartoon";
 
 
         try {

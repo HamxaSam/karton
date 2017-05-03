@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.hamza.karton.Fragments.ActivityShareFragment;
+import com.example.hamza.karton.Fragments.CatagoryFragment;
 import com.example.hamza.karton.R;
-import com.example.hamza.karton.youtubeData.YouTubeActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
   // declaration here.........
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
-            Fragment fragment = new YouTubeActivity();
+            Fragment fragment = new CatagoryFragment();
             navigationView.getMenu().getItem(0).setChecked(true);
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Fragment fragment = null;
         switch (id) {
             case R.id.Catagory:
-                fragment = new YouTubeActivity();
+                fragment = new CatagoryFragment();
                 break;
             case R.id.Search:
                 Toast.makeText(getApplication(),"search has selected..",Toast.LENGTH_SHORT).show();
