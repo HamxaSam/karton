@@ -18,6 +18,7 @@ public class ListActivity extends Fragment {
  ProgressDialog pDialog;
     ListView listView;
 
+    /* override method*/
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_list, container, false);
