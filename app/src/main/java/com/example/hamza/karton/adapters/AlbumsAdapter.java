@@ -2,19 +2,16 @@ package com.example.hamza.karton.adapters;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hamza.karton.Model.Album;
 import com.example.hamza.karton.R;
-import com.example.hamza.karton.activities.ListActivity;
 
 import java.util.List;
 
@@ -22,7 +19,7 @@ import java.util.List;
 public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHolder> {
 
     LayoutInflater inflator;
-    RelativeLayout album_card;
+
     Context context;
     private Activity mContext;
     private List<Album> albumList;
@@ -38,14 +35,27 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
        // album_card =(RelativeLayout) v.findViewById(R.id.album_card);
         return new MyViewHolder(v);
     }
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView title;
+        public ImageView thumbnail;
+        public final Context mContext;
 
+        public MyViewHolder(View v) {
+
+            super(v);
+            mContext = v.getContext();
+            //context = itemView.getContext();
+            title = (TextView) v.findViewById(R.id.title);
+            thumbnail = (ImageView) v.findViewById(R.id.thumbnail);
+        }
+    }
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         Album album = albumList.get(position);
 
         holder.title.setText(album.getName());
 
-        album_card.setOnClickListener(new View.OnClickListener() {
+      /*  album_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent;
@@ -58,8 +68,21 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
                         break;
                 }
             }
-        });
+        });*/
       Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
+
+        holder.thumbnail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //holder.mContext.startActivity(
+               /* Intent sendIntent = new Intent(mContext, ShowListsOne.class);
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_SUBJECT, "" + CatagoryFragment. + "\" on YouTube");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "http://www.youtube.com/watch?v=" + video.getId());
+                sendIntent.setType("text/plain");
+                holder.mContext.startActivity(sendIntent);*/
+            }
+        });
     }
 
     @Override
@@ -68,15 +91,5 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         return albumList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title;
-        public ImageView thumbnail;
 
-        public MyViewHolder(View v) {
-            super(v);
-            context = itemView.getContext();
-            title = (TextView) v.findViewById(R.id.title);
-            thumbnail = (ImageView) v.findViewById(R.id.thumbnail);
-        }
-    }
 }

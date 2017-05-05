@@ -9,37 +9,35 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.hamza.karton.Model.Albumone;
+import com.example.hamza.karton.Model.Albumtwo;
 import com.example.hamza.karton.R;
 
 import java.util.List;
 
-/**
- * Created by Ravi Tamada on 18/05/16.
- */
-public class AlbumsAdapterone extends RecyclerView.Adapter<AlbumsAdapterone.MyViewHolder> {
+
+public class AlbumsAdaptertwo extends RecyclerView.Adapter<AlbumsAdaptertwo.MyViewHolder> {
 
     private Activity mContext;
-    private List<Albumone> albumListone;
+    private List<Albumtwo> albumListtwo;
     LayoutInflater inflator;
 
-    public AlbumsAdapterone(Activity mContext, List<Albumone> albumList) {
+    public AlbumsAdaptertwo(Activity mContext, List<Albumtwo> albumListtwo) {
         this.mContext = mContext;
-        this.albumListone = albumList;
+        this.albumListtwo = albumListtwo;
         inflator = mContext.getLayoutInflater();
     }
 
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = inflator.inflate(R.layout.listview_episode, parent, false);
+        View v = inflator.inflate(R.layout.activity_description_design, parent, false);
 
         return new MyViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        Albumone album = albumListone.get(position);
+        Albumtwo album = albumListtwo.get(position);
 
         holder.title.setText(album.getName());
         holder.count.setText(album.getNumOfSongs());
@@ -64,17 +62,9 @@ public class AlbumsAdapterone extends RecyclerView.Adapter<AlbumsAdapterone.MyVi
         }
     }
 
-    /**
-     * Showing popup menu when tapping on 3 dots
-     */
-
-
-
-
-
     @Override
     public int getItemCount() {
 
-        return albumListone.size();
+        return albumListtwo.size();
     }
 }

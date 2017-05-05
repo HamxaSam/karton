@@ -3,15 +3,15 @@ package com.example.hamza.karton.Model;
 /**
  * Created by Lincoln on 18/05/16.
  */
-public class Albumone {
+public class Albumtwo {
     private String name;
     private String numOfSongs;
     private String thumbnail;
 
-    public Albumone() {
+    public Albumtwo() {
     }
 
-    public Albumone(String name, String numOfSongs, String thumbnail) {
+    public Albumtwo(String name, String numOfSongs, String thumbnail) {
         this.name = name;
         this.numOfSongs = numOfSongs;
         this.thumbnail = thumbnail;

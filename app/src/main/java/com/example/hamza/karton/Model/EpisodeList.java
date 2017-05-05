@@ -5,4 +5,5 @@ package com.example.hamza.karton.Model;
  */
 
 public class EpisodeList {
+
 }

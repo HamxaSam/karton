@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!-- suppress ALL -->
+<?xml version="1.0" encoding="utf-8"?><!-- suppress ALL --><!-- suppress ALL --><!-- suppress ALL -->
 <!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hamza.karton">
@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,9 +20,31 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.ListActivity" />
-        <activity android:name=".Fragments.ActivityShareFragment"></activity>
+        <activity android:name=".Fragments.ActivityShareFragment" />
+        <activity android:name=".activities.ShowListsOne"/>
 
+        >
+        <activity android:name=".activities.ActivityRecyclerListOne" />
 
+        <meta-data
+            android:name="DATABASE"
+            android:value="myapp.db" />
+        <meta-data
+            android:name="TABLE"
+            android:value="sugar" />
+        <meta-data
+            android:name="VERSION"
+            android:value="20" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.example.hamza.karton" />
+
+        <activity android:name=".activities.DescriptionActivity" />
+
+        <activity android:name=".activities.DescriptionDesignActivity"></activity>
     </application>
 
 </manifest>

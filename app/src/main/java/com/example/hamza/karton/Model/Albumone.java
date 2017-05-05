@@ -1,21 +1,22 @@
-package info.androidhive.cardview;
+package com.example.hamza.karton.Model;
 
 /**
  * Created by Lincoln on 18/05/16.
  */
-public class Album {
+public class Albumone {
     private String name;
-    private int numOfSongs;
-    private int thumbnail;
+    private String numOfSongs;
+    private String thumbnail;
 
-    public Album() {
+    public Albumone() {
     }
 
-    public Album(String name, int numOfSongs, int thumbnail) {
+    public Albumone(String name, String numOfSongs, String thumbnail) {
         this.name = name;
         this.numOfSongs = numOfSongs;
         this.thumbnail = thumbnail;
     }
+
     public String getName() {
         return name;
     }
@@ -24,19 +25,19 @@ public class Album {
         this.name = name;
     }
 
-    public int getNumOfSongs() {
+    public String getNumOfSongs() {
         return numOfSongs;
     }
 
-    public void setNumOfSongs(int numOfSongs) {
+    public void setNumOfSongs(String numOfSongs) {
         this.numOfSongs = numOfSongs;
     }
 
-    public int getThumbnail() {
+    public String getThumbnail() {
         return thumbnail;
     }
 
-    public void setThumbnail(int thumbnail) {
+    public void setThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
     }
 }

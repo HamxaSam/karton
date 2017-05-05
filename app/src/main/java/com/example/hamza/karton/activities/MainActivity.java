@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawer;
     NavigationView navigationView;
     ActionBarDrawerToggle toggle;
-    Fragment fragment;
+
     FragmentManager fragmentManager;
   // on back press nevigation drawer
     @Override

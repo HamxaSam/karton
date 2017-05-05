@@ -33,8 +33,8 @@ import java.util.ArrayList;
 
 public class CatagoryFragment extends Fragment {
     RecyclerView recyclerView;
-    ArrayList albumList;
-    ArrayList<String> arrr;
+    ArrayList<Album> albumList;
+
     ProgressDialog pDialog;
     StringRequest strReq;
     AlbumsAdapter adapter;
@@ -50,8 +50,7 @@ public class CatagoryFragment extends Fragment {
         final RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        adapter = new AlbumsAdapter(getActivity(), albumList);
-        recyclerView.setAdapter(adapter);
+
 //        arrr = new ArrayList<>();
 //        String str = StringUtils.join(arrr, ",");
 
@@ -59,12 +58,12 @@ public class CatagoryFragment extends Fragment {
          pDialog.setMessage("please wait!!");
         if (!pDialog.isShowing())
             pDialog.show();
-        final String query = "cartoon";
+        final String query = "PLWz5rJ2EKKc_Tt7q77qwyKRgytF1RzRx8";
 
 
         try {
            strReq = new StringRequest(Request.Method.GET,
-                    AppConfig.URL_YOUTUBE + "&q=" + URLEncoder.encode(query, "UTF-8"), new Response.Listener<String>() {
+                    AppConfig.URL_YOUTUBE + "&id=" + URLEncoder.encode(query, "UTF-8"), new Response.Listener<String>() {
 
                 @Override
                 public void onResponse(String response) {
@@ -89,8 +88,10 @@ public class CatagoryFragment extends Fragment {
                             Album album = new Album(title, urll);
                             albumList.add(album);
 
-                        }
 
+                        }
+                        adapter = new AlbumsAdapter(getActivity(), albumList);
+                        recyclerView.setAdapter(adapter);
                         adapter.notifyDataSetChanged();
                     } catch (JSONException e) {
                         e.printStackTrace();
