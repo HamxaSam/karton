@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/video_thumbnail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:padding="15dp"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_thumbnail"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+
+
+
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/textColorfav"
+            android:textSize="10sp"
+            tools:text="Video Title text that is long enough to make the line wrap around to the next line." />
+
+        <RelativeLayout
+            android:id="@+id/video_stats_line"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_title"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/video_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/video_stats_line"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/secondary_text_light"
+            tools:text="This is a sample description of the video item that is long enough to wrap around to the next line." />
+
+    </RelativeLayout>

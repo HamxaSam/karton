@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
-import com.example.hamza.karton.language.TypefaceUtil;
 
 import java.util.Locale;
 
@@ -35,7 +34,7 @@ public class AppController extends Application{
         config.locale = locale;
         getApplicationContext().getResources().updateConfiguration(config, null);
 
-        TypefaceUtil.overrideFont(getApplicationContext(), "monospace", "assests/Shoroq-Font.ttf");
+        //TypefaceUtil.overrideFont(getApplicationContext(), "monospace", "assests/Shoroq-Font.ttf");
     }
 
     public RequestQueue getRequestQueue() {

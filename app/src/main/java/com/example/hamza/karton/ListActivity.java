@@ -1,6 +1,5 @@
 package com.example.hamza.karton;
 
-
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,9 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.hamza.karton.Model.EpisodeList;
-import com.example.hamza.karton.adapters.CustomEpisodeAdapter;
 
 import java.util.ArrayList;
+
+/**
+ * Created by Usman on 5/4/2017.
+ */
 
 public class ListActivity extends Fragment {
  ProgressDialog pDialog;
@@ -27,7 +29,7 @@ public class ListActivity extends Fragment {
         listView = (ListView) v.findViewById(R.id.listView_detail);
         ArrayList<EpisodeList> ArrayListEpisode = new ArrayList<>();
 
-
+/*
         EpisodeList El = new EpisodeList("Tom & jerry", "View:200", R.drawable.tom);
         ArrayListEpisode.add(El);
 
@@ -40,8 +42,7 @@ public class ListActivity extends Fragment {
         CustomEpisodeAdapter adapter = new CustomEpisodeAdapter(getActivity(), ArrayListEpisode);
         listView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
-
+*/
         return v;
     }
 }
-

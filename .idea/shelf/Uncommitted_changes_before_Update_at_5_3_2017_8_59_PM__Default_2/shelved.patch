@@ -1,0 +1,483 @@
+Index: app/src/main/res/values-v21/styles.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-v21/styles.xml	
++++ app/src/main/res/values-v21/styles.xml	
+@@ -0,0 +1,1 @@
++<resources></resources>
+Index: app/src/main/res/layout/favouritepisode.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/favouritepisode.xml	
++++ app/src/main/res/layout/favouritepisode.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:orientation="vertical" android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_favourite.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_favourite.xml	
++++ app/src/main/res/layout/activity_favourite.xml	
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/activity_favourite"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:paddingBottom="@dimen/activity_vertical_margin"
++    android:paddingLeft="@dimen/activity_horizontal_margin"
++    android:paddingRight="@dimen/activity_horizontal_margin"
++    android:paddingTop="@dimen/activity_vertical_margin"
++    tools:context="com.example.hamza.karton.favourite">
++
++</RelativeLayout>
+Index: app/src/main/java/com/example/hamza/karton/Model/favEpisode.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/Model/favEpisode.java	
++++ app/src/main/java/com/example/hamza/karton/Model/favEpisode.java	
+@@ -0,0 +1,26 @@
++package com.example.hamza.karton.Model;
++
++/**
++ * Created by Hamza on 5/3/2017.
++ */
++
++public class favEpisode {
++    int image;
++    String title;
++
++    public int getImage() {
++        return image;
++    }
++
++    public void setImage(int image) {
++        this.image = image;
++    }
++
++    public String getTitle() {
++        return title;
++    }
++
++    public void setTitle(String title) {
++        this.title = title;
++    }
++}
+Index: app/src/main/java/com/example/hamza/karton/language/LocaleHelper.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/language/LocaleHelper.java	
++++ app/src/main/java/com/example/hamza/karton/language/LocaleHelper.java	
+@@ -0,0 +1,7 @@
++package com.example.hamza.karton.language;
++
++/**
++ * Created by Hamza on 5/3/2017.
++ */
++public class LocaleHelper {
++}
+Index: app/src/main/java/com/example/hamza/karton/adapters/CustomEpisodeAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/adapters/CustomEpisodeAdapter.java	
++++ app/src/main/java/com/example/hamza/karton/adapters/CustomEpisodeAdapter.java	
+@@ -0,0 +1,7 @@
++package com.example.hamza.karton.adapters;
++
++/**
++ * Created by Hamza on 5/2/2017.
++ */
++public class CustomEpisodeAdapter {
++}
+Index: app/src/main/java/com/example/hamza/karton/favourite.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/favourite.java	
++++ app/src/main/java/com/example/hamza/karton/favourite.java	
+@@ -0,0 +1,13 @@
++package com.example.hamza.karton;
++
++import android.support.v7.app.AppCompatActivity;
++import android.os.Bundle;
++
++public class favourite extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_favourite);
++    }
++}
+Index: app/src/main/res/layout/content_share_fragment.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/content_share_fragment.xml	
++++ app/src/main/res/layout/content_share_fragment.xml	
+@@ -0,0 +1,16 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:id="@+id/content_share_fragment"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:paddingBottom="@dimen/activity_vertical_margin"
++    android:paddingLeft="@dimen/activity_horizontal_margin"
++    android:paddingRight="@dimen/activity_horizontal_margin"
++    android:paddingTop="@dimen/activity_vertical_margin"
++    app:layout_behavior="@string/appbar_scrolling_view_behavior"
++    tools:context="com.example.hamza.karton.Fragments.ShareFragment"
++    tools:showIn="@layout/activity_share_fragment">
++
++</RelativeLayout>
+Index: app/src/main/java/com/example/hamza/karton/Model/EpisodeList.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/Model/EpisodeList.java	
++++ app/src/main/java/com/example/hamza/karton/Model/EpisodeList.java	
+@@ -0,0 +1,8 @@
++package com.example.hamza.karton.Model;
++
++/**
++ * Created by Hamza on 5/2/2017.
++ */
++
++public class EpisodeList {
++}
+Index: app/src/main/java/com/example/hamza/karton/language/TypefaceUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/language/TypefaceUtil.java	
++++ app/src/main/java/com/example/hamza/karton/language/TypefaceUtil.java	
+@@ -0,0 +1,8 @@
++package com.example.hamza.karton.language;
++
++/**
++ * Created by Hamza on 5/3/2017.
++ */
++
++public class TypefaceUtil {
++}
+Index: app/src/main/java/com/example/hamza/karton/adapters/FavEpisodeAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/adapters/FavEpisodeAdapter.java	
++++ app/src/main/java/com/example/hamza/karton/adapters/FavEpisodeAdapter.java	
+@@ -0,0 +1,60 @@
++package com.example.hamza.karton.adapters;
++
++import android.app.Activity;
++import android.support.v7.widget.RecyclerView;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.ViewGroup;
++import android.widget.ImageView;
++import android.widget.TextView;
++
++import com.bumptech.glide.Glide;
++import com.example.hamza.karton.Model.favEpisode;
++import com.example.hamza.karton.R;
++
++import java.util.List;
++
++/**
++ * Created by Hamza on 5/3/2017.
++ */
++public class FavEpisodeAdapter extends RecyclerView.Adapter<FavEpisodeAdapter.MyViewHolder> {
++    private Activity mContext;
++    private List<favEpisode> favEpisodeList;
++    LayoutInflater inflator;
++
++    public FavEpisodeAdapter(Activity mContext, List<favEpisode> favEpisodeList) {
++        this.mContext = mContext;
++        this.favEpisodeList = favEpisodeList;
++        inflator = mContext.getLayoutInflater();
++    }
++
++
++
++    @Override
++    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
++        View v = inflator.inflate(R.layout.favouritepisode, parent, false);
++        return new MyViewHolder(v);
++    }
++    @Override
++    public void onBindViewHolder(MyViewHolder holder, int position) {
++        favEpisode fe = favEpisodeList.get(position);
++        holder.title.setText(fe.getTitle());
++        Glide.with(mContext).load(fe.getImage()).into(holder.thumbnail);
++
++    }
++    public class MyViewHolder extends RecyclerView.ViewHolder {
++        public TextView title;
++        public ImageView thumbnail;
++
++        public MyViewHolder(View itemView) {
++            super(itemView);
++            title = (TextView) itemView.findViewById(R.id.fav_title);
++            thumbnail = (ImageView) itemView.findViewById(R.id.fav_thumbnail);
++        }
++    }
++    @Override
++    public int getItemCount() {
++         return favEpisodeList.size();
++    }
++}
++
+Index: app/src/main/java/com/example/hamza/karton/Fragments/ShareFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/Fragments/ShareFragment.java	
++++ app/src/main/java/com/example/hamza/karton/Fragments/ShareFragment.java	
+@@ -0,0 +1,31 @@
++package com.example.hamza.karton.Fragments;
++
++import android.os.Bundle;
++import android.support.design.widget.FloatingActionButton;
++import android.support.design.widget.Snackbar;
++import android.support.v7.app.AppCompatActivity;
++import android.support.v7.widget.Toolbar;
++import android.view.View;
++
++import com.example.hamza.karton.R;
++
++public class ShareFragment extends AppCompatActivity {
++
++    @Override
++    protected void onCreate(Bundle savedInstanceState) {
++        super.onCreate(savedInstanceState);
++        setContentView(R.layout.activity_share_fragment);
++        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
++        setSupportActionBar(toolbar);
++
++        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
++        fab.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
++                        .setAction("Action", null).show();
++            }
++        });
++    }
++
++}
+Index: app/src/main/res/layout/listview_episode.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/listview_episode.xml	
++++ app/src/main/res/layout/listview_episode.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:orientation="vertical" android:layout_width="match_parent"
++    android:layout_height="match_parent">
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/values-ar/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values-ar/strings.xml	
++++ app/src/main/res/values-ar/strings.xml	
+@@ -0,0 +1,28 @@
++<resources>
++    <string name="navigation_drawer_open">navigation_drawer_open</string>
++    <string name="navigation_drawer_close">navigation_drawer_close</string>
++    <string name="app_name" translatable="true">karton+</string>
++    <string name="titleColor">ea8f38</string>
++    <string name="title_activity_share_fragment">ShareFragment</string>
++    <string name="tag"/>
++
++    <!--
++        <string name="name">بحث</string>
++        <string name="Search">البحث </string>
++           <string name="app_name">حسب</string>
++        <string name="Favorite">المفضلة</string>
++        <string name="Seasons number">عدد الأجزاء</string>
++        <string name="Episodes number">عدد الحلقات </string>
++        <string name="Views">المشاهدات </string>
++        <string name="Search for a cartoon">البحث عن كرتون </string>
++        <string name="Type what you are looking for then tap search">كتب أسم الكرتون الذي تبحث عنه </string>
++        <string name="Cancel">إلغاء </string>
++        <string name="Category">الأقسام </string>
++        <string name="Latest">المضاف حديثاً </string>
++        <string name="Ask for a series">طلب إضافة المزيد </string>
++        <string name="Report a broken episode">إبلاغ عن حلقة لا تعمل </string>
++        <string name="Share this app">بحث </string>
++        <string name="Rate this app">تقييم التطبيق :</string>-->
++
++</resources>
++
+Index: app/src/main/java/com/example/hamza/karton/Fragments/CatagoryFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/hamza/karton/Fragments/CatagoryFragment.java	(date 1493825253000)
++++ app/src/main/java/com/example/hamza/karton/Fragments/CatagoryFragment.java	
+@@ -19,7 +19,7 @@
+ import com.android.volley.toolbox.StringRequest;
+ import com.example.hamza.karton.Model.Album;
+ import com.example.hamza.karton.R;
+-import com.example.hamza.karton.RecyclerView.AlbumsAdapter;
++import com.example.hamza.karton.adapters.AlbumsAdapter;
+ import com.example.hamza.karton.helper.AppConfig;
+ import com.example.hamza.karton.helper.AppController;
+ 
+@@ -31,8 +31,6 @@
+ import java.net.URLEncoder;
+ import java.util.ArrayList;
+ 
+-import io.vov.vitamio.utils.StringUtils;
+-
+ public class CatagoryFragment extends Fragment {
+     RecyclerView recyclerView;
+     ArrayList albumList;
+@@ -40,6 +38,7 @@
+     ProgressDialog pDialog;
+     StringRequest strReq;
+     AlbumsAdapter adapter;
++
+     @Nullable
+     @Override
+     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+@@ -53,8 +52,8 @@
+         recyclerView.setItemAnimator(new DefaultItemAnimator());
+         adapter = new AlbumsAdapter(getActivity(), albumList);
+         recyclerView.setAdapter(adapter);
+-        arrr = new ArrayList<>();
+-        String str = StringUtils.join(arrr, ",");
++//        arrr = new ArrayList<>();
++//        String str = StringUtils.join(arrr, ",");
+ 
+         pDialog = new ProgressDialog(getContext());
+          pDialog.setMessage("please wait!!");
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/AndroidManifest.xml	(date 1493825253000)
++++ app/src/main/AndroidManifest.xml	
+@@ -21,6 +21,8 @@
+         </activity>
+         <activity android:name=".activities.ListActivity" />
+         <activity android:name=".Fragments.ActivityShareFragment"></activity>
++
++
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_share_fragment.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_share_fragment.xml	(date 1493825253000)
++++ app/src/main/res/layout/activity_share_fragment.xml	
+@@ -1,28 +1,34 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    android:background="@color/colorPrimaryDark"
+-    tools:context="com.example.hamza.karton.Fragments.ActivityShareFragment">
++    android:fitsSystemWindows="true"
++    tools:context="com.example.hamza.karton.Fragments.ShareFragment">
+ 
+-    <Button
+-        android:id="@+id/button_share"
+-        android:layout_width="261dp"
+-        android:layout_height="50dp"
+-        android:layout_marginBottom="8dp"
++    <android.support.design.widget.AppBarLayout
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:theme="@style/AppTheme.AppBarOverlay">
+ 
++        <android.support.v7.widget.Toolbar
++            android:id="@+id/toolbar"
++            android:layout_width="match_parent"
++            android:layout_height="?attr/actionBarSize"
++            android:background="?attr/colorPrimary"
++            app:popupTheme="@style/AppTheme.PopupOverlay" />
+ 
+-        android:layout_marginLeft="8dp"
+-        android:layout_marginRight="8dp"
+-        android:layout_marginTop="8dp"
+-        android:text="Share Application on facebook"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.748"
+-        tools:layout_editor_absoluteX="86dp"
+-        tools:layout_editor_absoluteY="391dp" />
+-</android.support.constraint.ConstraintLayout>
++    </android.support.design.widget.AppBarLayout>
++
++    <include layout="@layout/content_share_fragment" />
++
++    <android.support.design.widget.FloatingActionButton
++        android:id="@+id/fab"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_gravity="bottom|end"
++        android:layout_margin="@dimen/fab_margin"
++        app:srcCompat="@android:drawable/ic_dialog_email" />
++
++</android.support.design.widget.CoordinatorLayout>
+Index: app/src/main/res/layout/activity_catagory_fragment.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_catagory_fragment.xml	(date 1493825253000)
++++ app/src/main/res/layout/activity_catagory_fragment.xml	
+@@ -4,6 +4,7 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+-    tools:context="com.example.hamza.karton.Fragments.CatagoryFragment">
++    tools:context="com.example.hamza.karton.Fragments.CatagoryFragment"
++    tools:ignore="MissingConstraints">
+ 
+ </android.support.constraint.ConstraintLayout>
