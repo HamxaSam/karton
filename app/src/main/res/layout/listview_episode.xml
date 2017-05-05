@@ -11,10 +11,13 @@
         android:id="@+id/imageView_listEpisode"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="260dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/tom"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
 
+        android:layout_marginLeft="260dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/tom"
         app:siBorderColor="@color/colorPrimary"
         app:siBorderWidth="6dp"
         app:siRadius="6dp"
@@ -22,38 +25,37 @@
         tools:ignore="RtlHardcoded" />
 
     <TextView
-        android:id="@+id/textView_views"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView_listEpisodeTitle"
-        android:layout_below="@+id/textView_listEpisodeTitle"
-        android:layout_marginTop="4dp"
-        android:text="Views:200"
-        android:textColor="@color/textColorView"
-        android:textSize="15dp"
-        tools:ignore="HardcodedText" />
-
-    <TextView
         android:id="@+id/textView_listEpisodeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView_listEpisode"
         android:layout_alignTop="@+id/imageView_listEpisode"
-        android:layout_marginEnd="113dp"
-        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
         android:text="TextView"
         android:textColor="@color/textColortext"
         android:textSize="24sp"
         tools:ignore="HardcodedText"
         tools:text="Tom &amp; Jerry" />
 
+    <TextView
+        android:id="@+id/textView_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView_listEpisodeTitle"
+        android:layout_below="@+id/textView_listEpisodeTitle"
+        android:layout_marginStart="13dp"
+        android:text="Views:200"
+        android:textColor="@color/textColorView"
+        android:textSize="15dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
     <ImageView
         android:id="@+id/imageView_see"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/textView_listEpisodeTitle"
-        android:layout_marginStart="13dp"
+        android:layout_marginEnd="30dp"
         android:tint="@color/textColortext"
         app:srcCompat="@drawable/eye"
         tools:ignore="ContentDescription" />

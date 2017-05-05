@@ -52,15 +52,16 @@ public class CatagoryFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         pDialog = new ProgressDialog(getContext());
-         pDialog.setMessage("please wait!!");
+        pDialog.setMessage(container.getResources().getString(R.string.please));
+
         if (!pDialog.isShowing())
             pDialog.show();
-        final String query = "cartoon";
+        final String query = "cPLWz5rJ2EKKc_Tt7q77qwyKRgytF1RzRx8";
 
 
         try {
            strReq = new StringRequest(Request.Method.GET,
-                    AppConfig.URL_YOUTUBE + "&q=" + URLEncoder.encode(query, "UTF-8"), new Response.Listener<String>() {
+                   AppConfig.URL_YOUTUBE + "&id=" + URLEncoder.encode(query, "UTF-8"), new Response.Listener<String>() {
 
                 @Override
                 public void onResponse(String response) {

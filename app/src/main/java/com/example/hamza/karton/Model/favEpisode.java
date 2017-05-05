@@ -13,6 +13,11 @@ public class favEpisode {
         Image = image;
     }
 
+    public favEpisode(String title, int image) {
+        Title = title;
+        Image = image;
+    }
+
     public String getTitle() {
         return Title;
     }

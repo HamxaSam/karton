@@ -15,6 +15,10 @@
     <string name="Report_a_broken_episode">إبلاغ عن حلقة لا تعمل </string>
     <string name="Share_this_app">بحث </string>
     <string name="Rate_this_app">تقييم التطبيق </string>
+    <string name="please">أرجو الإنتظار</string>
+    <string name="share">شارك</string>
+    <string name="share_on_facebook">أنشرها على الفيسبوك</string>
+
 
 </resources>
 

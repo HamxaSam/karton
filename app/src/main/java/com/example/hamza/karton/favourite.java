@@ -1,11 +1,13 @@
 package com.example.hamza.karton;
 
-import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.hamza.karton.Model.favEpisode;
 import com.example.hamza.karton.adapters.FavEpisodeAdapter;
@@ -13,33 +15,39 @@ import com.example.hamza.karton.adapters.FavEpisodeAdapter;
 import java.util.ArrayList;
 
 
-
-public class favourite extends AppCompatActivity {
+public class favourite extends Fragment {
     RecyclerView recyclerView;
-    ProgressDialog pDialog;
     FavEpisodeAdapter adapter;
     private ArrayList<favEpisode> fvEpisodeList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favourite);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_fav);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.activity_favourite, container, false);
+        recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view_fav);
 
-
-        fvEpisodeList = new ArrayList<>();
-        final RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getApplicationContext(), 3);
+        final RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 3);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        fvEpisodeList = new ArrayList<>();
 
-        //  adapter = new FavEpisodeAdapter((favourite)getApplicationContext(), fvEpisodeList);
+        favEpisode Fv = new favEpisode("Tom and Jerry", R.drawable.tom);
+        fvEpisodeList.add(Fv);
+        Fv = new favEpisode("Tom and Jerry", R.drawable.tom);
+        fvEpisodeList.add(Fv);
+        Fv = new favEpisode("Tom and Jerry", R.drawable.tom);
+        fvEpisodeList.add(Fv);
+        Fv = new favEpisode("Tom and Jerry", R.drawable.tom);
+        fvEpisodeList.add(Fv);
+        Fv = new favEpisode("Tom and Jerry", R.drawable.tom);
+        fvEpisodeList.add(Fv);
+        Fv = new favEpisode("Tom and Jerry", R.drawable.tom);
+        fvEpisodeList.add(Fv);
+
+
+        adapter = new FavEpisodeAdapter(getActivity(), fvEpisodeList);
         recyclerView.setAdapter(adapter);
 
-        if (recyclerView == null)
-            pDialog = new ProgressDialog(getApplicationContext());
-        pDialog.setMessage("please wait!!");
-        if (!pDialog.isShowing())
-            pDialog.show();
+        return v;
 
     }
 }

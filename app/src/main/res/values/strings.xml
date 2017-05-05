@@ -16,8 +16,17 @@
     <string name="latest" translatable="true">latest</string>
     <string name="Ask_for_a_series" translatable="true">Ask for a series</string>
     <string name="Report_a_broken_episode" translatable="true">Report a broken episode</string>
-    <string name="Share_this_app" translatable="true">Share this app</string>
     <string name="category" translatable="true">category</string>
     <string name="Rate_this_app">Rate this App</string>
+    <string name="facebook_app_id">1522358541164398</string>
+    <string name="please">please wait</string>
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-0664570763252260/3326522424</string>
+    <string name="interstitial_full_screen">ca-app-pub-0664570763252260/1769900428</string>
+    <string name="share">share</string>
+    <string name="share_on_facebook">share on facebook</string>
+    <string name="title_activity_latest_fragment">LatestFragment</string>
+
+
 </resources>
 

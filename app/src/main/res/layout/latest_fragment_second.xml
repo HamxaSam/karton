@@ -3,32 +3,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/cardview_dark_background">
+    android:background="@color/colorAccent">
 
 
     <!--  android:id="@+id/thumbnail"-->
 
 
     <com.github.siyamed.shapeimageview.RoundedImageView
-        android:id="@+id/fav_thumbnail"
+        android:id="@+id/Latest_thumbnail"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/fav_title"
-        android:layout_marginTop="16dp"
+        android:layout_alignStart="@+id/Latest_Tilte"
+        android:layout_marginTop="10dp"
         android:src="@drawable/tom"
         app:siBorderColor="@color/colorPrimaryDark"
-        app:siBorderWidth="7dp"
+        app:siBorderWidth="8dp"
         app:siRadius="20dp"
         app:siSquare="true" />
 
     <TextView
-        android:id="@+id/fav_title"
+        android:id="@+id/Latest_Tilte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/fav_thumbnail"
-        android:layout_marginStart="20dp"
+        android:layout_below="@+id/Latest_thumbnail"
+        android:layout_marginStart="14dp"
         android:layout_marginTop="14dp"
         android:text="tom and jerry"
         android:textColor="@color/textColor"

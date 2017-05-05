@@ -3,6 +3,7 @@
     package="com.example.hamza.karton">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".helper.AppController"
@@ -14,18 +15,56 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="locale|orientation">
-            <activity android:name=".AndroidTranslate"></activity>
+            <activity android:name=".AndroidTranslate" />
+
+            <application android:label="@string/app_name">
+                <meta-data
+                    android:name="com.facebook.sdk.ApplicationId"
+                    android:value="@string/facebook_app_id" />
+                <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+                -->
+                <meta-data
+                    android:name="com.google.android.gms.version"
+                    android:value="@integer/google_play_services_version" />
+            </application>
+
+            <provider
+                android:name="com.facebook.FacebookContentProvider"
+                android:authorities="com.facebook.app.FacebookContentProvider1522358541164398"
+                android:exported="true" />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
         <activity android:name=".ListActivity" />
         <activity android:name=".favourite" />
         <activity
             android:name=".Fragments.ShareFragment"
             android:label="@string/title_activity_share_fragment"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".nevigationDrawerItemClickClasses.SearchFragment" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".nevigationDrawerItemClickClasses.ReportBugFragment" />
+        <activity
+            android:name=".nevigationDrawerItemClickClasses.LatestFragment"
+            android:label="@string/title_activity_latest_fragment"
             android:theme="@style/AppTheme"></activity>
     </application>
 

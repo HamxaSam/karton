@@ -18,18 +18,15 @@ import java.util.List;
  * Created by Hamza on 5/3/2017.
  */
 public class FavEpisodeAdapter extends RecyclerView.Adapter<FavEpisodeAdapter.MyViewHolder> {
+    LayoutInflater inflator;
     private Activity mContext;
     private List<favEpisode> favEpisodeList;
-    LayoutInflater inflator;
 
     public FavEpisodeAdapter(Activity mContext, List<favEpisode> favEpisodeList) {
         this.mContext = mContext;
         this.favEpisodeList = favEpisodeList;
         inflator = mContext.getLayoutInflater();
     }
-
-
-
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = inflator.inflate(R.layout.favouritepisode, parent, false);
@@ -42,6 +39,12 @@ public class FavEpisodeAdapter extends RecyclerView.Adapter<FavEpisodeAdapter.My
         Glide.with(mContext).load(fe.getImage()).into(holder.thumbnail);
 
     }
+
+    @Override
+    public int getItemCount() {
+        return favEpisodeList.size();
+    }
+
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title;
         public ImageView thumbnail;
@@ -51,10 +54,6 @@ public class FavEpisodeAdapter extends RecyclerView.Adapter<FavEpisodeAdapter.My
             title = (TextView) itemView.findViewById(R.id.fav_title);
             thumbnail = (ImageView) itemView.findViewById(R.id.fav_thumbnail);
         }
-    }
-    @Override
-    public int getItemCount() {
-         return favEpisodeList.size();
     }
 }
 
