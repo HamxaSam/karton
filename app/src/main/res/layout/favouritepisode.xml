@@ -1,36 +1,6 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimaryDark">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-
-    <!--  android:id="@+id/thumbnail"-->
-
-
-    <TextView
-        android:id="@+id/fav_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/thumbnail"
-        android:layout_below="@+id/thumbnail"
-        android:text="tom and jerry"
-        android:textColor="@color/textColor"
-        tools:ignore="HardcodedText,UnknownIdInLayout" />
-
-    <com.github.siyamed.shapeimageview.RoundedImageView
-        android:id="@+id/fav_thumbnail"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="17dp"
-        android:src="@drawable/tom"
-        app:siBorderColor="@color/colorPrimaryDark"
-        app:siBorderWidth="8dp"
-        app:siRadius="10dp"
-        app:siSquare="true" />
-
-
-</RelativeLayout>
+</LinearLayout>

@@ -19,7 +19,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.hamza.karton.Model.Album;
 import com.example.hamza.karton.R;
-import com.example.hamza.karton.RecyclerView.AlbumsAdapter;
+import com.example.hamza.karton.adapters.AlbumsAdapter;
 import com.example.hamza.karton.helper.AppConfig;
 import com.example.hamza.karton.helper.AppController;
 
@@ -31,8 +31,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 
-import io.vov.vitamio.utils.StringUtils;
-
 public class CatagoryFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList albumList;
@@ -40,6 +38,7 @@ public class CatagoryFragment extends Fragment {
     ProgressDialog pDialog;
     StringRequest strReq;
     AlbumsAdapter adapter;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -53,8 +52,8 @@ public class CatagoryFragment extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         adapter = new AlbumsAdapter(getActivity(), albumList);
         recyclerView.setAdapter(adapter);
-        arrr = new ArrayList<>();
-        String str = StringUtils.join(arrr, ",");
+//        arrr = new ArrayList<>();
+//        String str = StringUtils.join(arrr, ",");
 
         pDialog = new ProgressDialog(getContext());
          pDialog.setMessage("please wait!!");
@@ -72,7 +71,7 @@ public class CatagoryFragment extends Fragment {
                     //Log.d(TAG, "Login Response: " + response.toString());
                     if (pDialog.isShowing())
                         pDialog.hide();
-
+//&id=PLWz5rJ2EKKc_Tt7q77qwyKRgytF1RzRx8
                     Log.d("MainActivity response", response);
                     try {
                         JSONObject jsonObject = new JSONObject(response);

@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".activities.ListActivity" />
         <activity android:name=".Fragments.ActivityShareFragment"></activity>
+
+
     </application>
 
 </manifest>

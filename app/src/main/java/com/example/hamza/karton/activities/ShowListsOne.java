@@ -1,13 +1,15 @@
-package com.example.hamza.karton;
+package com.example.hamza.karton.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class favourite extends AppCompatActivity {
+import com.example.hamza.karton.R;
+
+public class ShowListsOne extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favourite);
+        setContentView(R.layout.activity_show_lists_one);
     }
 }
