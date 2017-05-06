@@ -19,7 +19,7 @@ public class ActivityShareFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
        View v= inflater.inflate(R.layout.activity_share_fragment,container,false);
-       share= (Button) v.findViewById(R.id.buttonshare);
+       share= (Button) v.findViewById(R.id.shareButton);
         /*Facebook - "com.facebook.katana"
         Twitter - "com.twitter.android"
         Instagram - "com.instagram.android"

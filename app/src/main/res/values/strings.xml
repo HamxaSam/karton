@@ -26,6 +26,7 @@
     <string name="share">share</string>
     <string name="share_on_facebook">share on facebook</string>
     <string name="title_activity_latest_fragment">LatestFragment</string>
+    <string name="add_to_favourite">add to favourite</string>
 
 
 </resources>

@@ -1,16 +1,19 @@
 package com.example.hamza.karton.adapters;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hamza.karton.Model.Albumtwo;
 import com.example.hamza.karton.R;
+import com.example.hamza.karton.activities.PlayActivity;
 
 import java.util.List;
 
@@ -34,7 +37,19 @@ public class AlbumsAdaptertwo extends RecyclerView.Adapter<AlbumsAdaptertwo.MyVi
 
         return new MyViewHolder(v);
     }
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        public TextView title, count;
+        public ImageView thumbnail;
+        public ImageButton imageButton_play;
 
+        public MyViewHolder(View v) {
+            super(v);
+            title = (TextView) v.findViewById(R.id.title);
+            count = (TextView) v.findViewById(R.id.count);
+            thumbnail = (ImageView) v.findViewById(R.id.thumbnail);
+            imageButton_play = (ImageButton) v.findViewById(R.id.imageButton_play);
+        }
+    }
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Albumtwo album = albumListtwo.get(position);
@@ -45,22 +60,17 @@ public class AlbumsAdaptertwo extends RecyclerView.Adapter<AlbumsAdaptertwo.MyVi
         // loading album cover using Glide library
 
         Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
+        holder.imageButton_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mContext, PlayActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
+
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView title, count;
-        public ImageView thumbnail;
 
-        public MyViewHolder(View v) {
-            super(v);
-
-            title = (TextView) v.findViewById(R.id.title);
-            count = (TextView) v.findViewById(R.id.count);
-            thumbnail = (ImageView) v.findViewById(R.id.thumbnail);
-
-
-        }
-    }
 
     @Override
     public int getItemCount() {

@@ -1,4 +1,4 @@
-package com.example.hamza.karton;
+package com.example.hamza.karton.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,19 +10,20 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.hamza.karton.Model.favEpisode;
+import com.example.hamza.karton.R;
 import com.example.hamza.karton.adapters.FavEpisodeAdapter;
 
 import java.util.ArrayList;
 
 
-public class favourite extends Fragment {
+public class FavouritesFragment extends Fragment {
     RecyclerView recyclerView;
     FavEpisodeAdapter adapter;
     private ArrayList<favEpisode> fvEpisodeList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.activity_favourite, container, false);
+        View v = inflater.inflate(R.layout.fragments_favourite, container, false);
         recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view_fav);
 
         final RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getActivity(), 3);

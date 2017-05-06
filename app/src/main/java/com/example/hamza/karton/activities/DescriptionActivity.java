@@ -69,7 +69,7 @@ public class DescriptionActivity extends AppCompatActivity {
         ppDialog.setMessage("please wait!!");
        /* if (!ppDialog.isShowing())
             ppDialog.show();*/
-        final String query = "xdItHEVfQ4U";
+        final String query = "RMdIkp24j7w";
 
 
         try {

@@ -3,61 +3,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_episode"
     android:background="@color/colorAccent"
-    android:orientation="vertical">
 
-    <com.github.siyamed.shapeimageview.RoundedImageView
-        android:id="@+id/imageView_listEpisode"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-
-        android:layout_marginLeft="260dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="12dp"
-        android:src="@drawable/tom"
-        app:siBorderColor="@color/colorPrimary"
-        app:siBorderWidth="6dp"
-        app:siRadius="6dp"
-        app:siSquare="true"
-        tools:ignore="RtlHardcoded" />
-
-    <TextView
-        android:id="@+id/textView_listEpisodeTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/imageView_listEpisode"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp"
-        android:text="TextView"
-        android:textColor="@color/textColortext"
-        android:textSize="24sp"
-        tools:ignore="HardcodedText"
-        tools:text="Tom &amp; Jerry" />
-
-    <TextView
-        android:id="@+id/textView_views"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView_listEpisodeTitle"
-        android:layout_below="@+id/textView_listEpisodeTitle"
-        android:layout_marginStart="13dp"
-        android:text="Views:200"
-        android:textColor="@color/textColorView"
-        android:textSize="15dp"
-        tools:ignore="HardcodedText,SpUsage" />
+ >
 
     <ImageView
         android:id="@+id/imageView_see"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/textView_listEpisodeTitle"
-        android:layout_marginEnd="30dp"
+        android:layout_width="27dp"
+        android:layout_height="47dp"
         android:tint="@color/textColortext"
         app:srcCompat="@drawable/eye"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription,RtlHardcoded"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.11"
+        android:layout_marginEnd="12dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:text="Views:200"
+        android:singleLine="true"
+        android:textColor="@color/textColorView"
+        android:textSize="10dp"
+        tools:ignore="Deprecated,HardcodedText,RtlHardcoded,SpUsage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.36"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginLeft="13dp"
+        app:layout_constraintLeft_toLeftOf="@+id/title"
+        app:layout_constraintRight_toRightOf="@+id/title"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/title" />
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/thumbnail"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/tom"
+        app:siBorderColor="@color/colorPrimary"
+        app:siBorderWidth="2dp"
+        app:siRadius="2dp"
+        app:siSquare="true"
+        tools:ignore="RtlHardcoded"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="32dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.12"
+        android:layout_marginStart="24dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="TextView"
+        android:textColor="@color/textColortext"
+        android:singleLine="true"
+        tools:ignore="Deprecated,HardcodedText,MissingConstraints,RtlHardcoded"
+        tools:text="Tom &amp; Jerry"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="157dp"
+        android:layout_marginStart="12dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/thumbnail" />
 
 </RelativeLayout>

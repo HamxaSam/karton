@@ -3,4 +3,5 @@
     <item name="drawer_layout" type="id">drawer_layout</item>
     <item name="fav_title" type="id">fav_title</item>
     <item name="fav_thumbnail" type="id">fav_thumbnail</item>
+    <item name="adView" type="id">adView</item>
 </resources>

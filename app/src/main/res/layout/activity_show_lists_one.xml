@@ -2,17 +2,18 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:fitsSystemWindows="true">
+    <include layout="@layout/activity_recycler_list_one"/>
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -21,7 +22,7 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="164dp"
+
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleTextAppearance="@android:color/transparent"
             app:layout_scrollFlags="scroll">
@@ -33,34 +34,39 @@
                 <ImageView
                     android:id="@+id/backdrop"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="200dp"
                     android:fitsSystemWindows="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/tom"
                     android:scaleType="centerCrop"
-                    app:layout_collapseMode="parallax" />
+                    app:layout_collapseMode="parallax"
+                    tools:ignore="ContentDescription" />
 
-                <LinearLayout
+                <TextView
+                    android:text="@string/episodes_number"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                    android:textColor="@color/textColorfav"
+                    android:background="@color/cardview_dark_background"
+                    android:id="@+id/textView_episodeNo"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="19dp"
+                    tools:ignore="RelativeOverlap" />
 
-                    <TextView
-                        android:id="@+id/love_music"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="helloTesing"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/backdrop_title" />
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@color/textColor"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/textView_addFavourite"
+                    android:text="@string/add_to_favourite"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="RtlHardcoded,RtlSymmetry" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="hello"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/backdrop_subtitle" />
 
-                </LinearLayout>
             </RelativeLayout>
 
             <android.support.v7.widget.Toolbar
@@ -73,8 +79,5 @@
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/activity_recycler_list_one"
-         />
 
 </android.support.design.widget.CoordinatorLayout>
