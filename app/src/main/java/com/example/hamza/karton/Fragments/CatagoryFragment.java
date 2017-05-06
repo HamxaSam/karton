@@ -183,9 +183,9 @@ public class CatagoryFragment extends Fragment {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        //                Log.e(TAG, "Login Error: " + error.getMessage());
-                        Toast.makeText(getContext(),
-                                error.getMessage(), Toast.LENGTH_LONG).show();
+//                        //                Log.e(TAG, "Login Error: " + error.getMessage());
+//                        Toast.makeText(getContext(),
+//                                error.getMessage(), Toast.LENGTH_LONG).show();
                         if (pDialog.isShowing())
                             pDialog.hide();
                     }
